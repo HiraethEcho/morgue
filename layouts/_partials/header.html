@@ -1,0 +1,8 @@
+<h1><a href="/">{{ site.Title }}</a></h1>
+<nav>
+  {{- range site.Menus.main -}}
+    <li>
+      <a href="{{- .URL -}}">{{- .Name -}}</a>
+    </li>
+  {{- end -}}
+</nav>

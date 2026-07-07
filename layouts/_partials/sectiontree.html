@@ -1,0 +1,16 @@
+{{- $page := .page -}}
+<ul>
+  <li>
+    <a href="{{- $page.RelPermalink -}}"
+      >{{- $page.Title -}}</a
+    >
+    {{- with $page.Params.Summary }}
+      {{ . -}}
+    {{- end -}}
+    {{- if $page.Sections -}}
+      {{- range $page.Sections -}}
+        {{- partial "sectiontree.html" (dict "page" .) -}}
+      {{- end -}}
+    {{- end -}}
+  </li>
+</ul>

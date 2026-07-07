@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <h2>{{ i18n "sections" }}</h2>
+  {{- range .Sections }}
+    {{- partial "sectiontree.html" (dict "page" .) -}}
+  {{- end }}
+  <h2>{{ i18n "taxonomies" }}</h2>
+  {{- range $taxonomy, $terms := .Site.Taxonomies -}}
+    {{- with . -}}
+      <h3>
+        <a href="{{- .Page.RelPermalink -}}">{{ .Page.Title }} </a>
+      </h3>
+      {{- with .Page.Params.Summary -}}
+        <p>{{- . -}}</p>
+      {{- end -}}
+      <ul>
+        {{- range . }}
+          <li>
+            <a href="{{- .Page.RelPermalink -}}">{{- .Page.Title -}}</a>
+            {{- .Page.Summary -}}
+          </li>
+        {{ end -}}
+      </ul>
+    {{- end -}}
+  {{- end -}}
+  <article>
+    <h2>{{ i18n "about" }}</h2>
+    {{ .Content }}
+  </article>
+{{ end }}

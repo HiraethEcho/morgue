@@ -1,0 +1,14 @@
+# term.html: Terms section heading
+[terms]
+other = "Terms"
+
+# indexes.html: Sections heading
+[sections]
+other = "Sections"
+
+# indexes.html: Taxonomies heading
+[taxonomies]
+other = "Taxonomies"
+
+[about]
+other = "About"

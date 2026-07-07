@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{- range .Sections }}
+    {{- partial "sectiontree.html" (dict "page" .) -}}
+  {{- end }}
+  <article>
+    {{ .Content }}
+    <ul>
+      {{ range .RegularPages }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ .Summary }}
+      {{ end }}
+    </ul>
+  </article>
+{{ end }}
