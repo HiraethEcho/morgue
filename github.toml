@@ -1,7 +1,6 @@
-baseURL = 'https://morgue.keinmal.top/'
-hasCJKLanguage = true
-locale = 'zh-cn'
+baseURL = 'https://hiraethecho.github.io/morgue'
 title = 'Morgue'
+hasCJKLanguage = true
 contentDir = 'morgue'
 defaultContentLanguage = 'zh-cn'
 
