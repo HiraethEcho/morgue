@@ -1,18 +1,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{- with resources.Get "css/main.css" }}
-  {{- $opts := dict
-    "minify" (cond hugo.IsDevelopment false true)
-    "sourceMap" (cond hugo.IsDevelopment "linked" "none")
-  }}
-  {{- with . | css.Build $opts }}
-    {{- if hugo.IsDevelopment }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
-    {{- else }}
-      {{- with . | fingerprint }}
-        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-      {{- end }}
-    {{- end }}
-  {{- end }}
-{{- end }}
+{{- $CSS := slice
+  (resources.Get "css/blockquote.scss")
+  (resources.Get "css/main.scss")
+-}}
+{{- $default := $CSS | resources.Concat "assets/default.css" | resources.Minify -}}
+<link rel="stylesheet" href="{{- $default.RelPermalink -}}" />

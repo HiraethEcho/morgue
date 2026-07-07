@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <p>{{ .Title }}</p>
   <p>
     {{- $page := . -}}
     {{- range $taxonomyName, $taxonomy := .Site.Taxonomies -}}
@@ -26,7 +26,5 @@
   {{- with .Params.summary -}}
     <p>{{- . -}}</p>
   {{- end -}}
-
-
   <article>{{ .Content }}</article>
 {{ end }}

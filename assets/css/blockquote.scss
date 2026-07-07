@@ -1,0 +1,78 @@
+body {
+  --blockquote-bg: #e6dfd3;
+  --blockquote-border: #b8ad9a;
+  --alert-note-bg: #e5edf5;
+  --alert-note-border: #4078c0;
+  --alert-tip-bg: #e0ede0;
+  --alert-tip-border: #3a8f47;
+  --alert-important-bg: #ede5f5;
+  --alert-important-border: #7a50c0;
+  --alert-caution-bg: #f5e5e5;
+  --alert-caution-border: #c03030;
+  --alert-warning-bg: #f5ede0;
+  --alert-warning-border: #9a7000;
+  &.dark {
+    --blockquote-bg: #434c5e;
+    --blockquot-border: #4c566a;
+    --alert-note-bg: #2e3f60;
+    --alert-tip-bg: #2a453a;
+    --alert-important-bg: #3d3466;
+    --alert-caution-bg: #5c2e38;
+    --alert-warning-bg: #54431e;
+  }
+}
+
+.alert {
+  display: flex;
+  flex-direction: column;
+  border-left: 0.25rem solid var(--blockquote-border);
+  margin: 0.5rem 0;
+  padding: 0.25rem 1rem 0.25rem 0.75rem;
+  background-color: var(--bg-secondary);
+  > .alert-heading {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    background-color: inherit;
+  }
+}
+
+.alert-note {
+  border-color: var(--alert-note-border);
+  border-left-color: var(--alert-note-border);
+  background-color: var(--alert-note-bg);
+  > .alert-heading {
+    color: var(--alert-note-border);
+  }
+}
+.alert-tip {
+  border-color: var(--alert-tip-border);
+  background-color: var(--alert-tip-bg);
+  > .alert-heading {
+    color: var(--alert-tip-border);
+  }
+}
+.alert-important {
+  border-color: var(--alert-important-border);
+  border-left-color: var(--alert-important-border);
+  background-color: var(--alert-important-bg);
+  > .alert-heading {
+    color: var(--alert-important-border);
+  }
+}
+.alert-caution {
+  border-color: var(--alert-caution-border);
+  border-left-color: var(--alert-caution-border);
+  background-color: var(--alert-caution-bg);
+  > .alert-heading {
+    color: var(--alert-caution-border);
+  }
+}
+.alert-warning {
+  border-color: var(--alert-warning-border);
+  border-left-color: var(--alert-warning-border);
+  background-color: var(--alert-warning-bg);
+  > .alert-heading {
+    color: var(--alert-warning-border);
+  }
+}

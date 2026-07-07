@@ -1,9 +1,12 @@
-baseURL = 'https://example.org/'
-# locale = 'en-US'
+baseURL = 'https://morgue.keinmal.top/'
+locale = 'zh-cn'
 title = 'Morgue'
+contentDir = 'morgue'
 
-[menus]
-  [[menus.main]]
-    name = 'Tags'
-    pageRef = '/tags'
-    weight = 30
+[taxonomies]
+tag = 'tags'
+category = 'categories'
+series = 'series'
+topic = "topics"
+genre = "genres"
+status = "status"

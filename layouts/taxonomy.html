@@ -1,33 +1,22 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+  <strong>{{ .Title }}</strong>
   {{- with .Page.Params.summary -}}
     <p>{{- . -}}</p>
   {{ end -}}
   <article>
-    {{- range .Data.Terms }}
-      <h2 id="term-{{- .Page.Title -}}">
-        <a class="sectionlink" href="{{- .Page.RelPermalink -}}"
-          >{{- .Page.Title -}}</a
-        >
+    {{ .Content }}
+    {{- range .Pages -}}
+      <h2>
+        <a href="{{- .Page.RelPermalink -}}">{{- .Page.Title -}}</a>
       </h2>
       {{- with .Page.Params.summary -}}
         <p>{{- . -}}</p>
       {{ end -}}
+      {{- $limit := default 1 site.Params.PostPerTermLimit -}}
       <ul>
-        {{- $limit := default 3 site.Params.PostPerTermLimit -}}
         {{- range .Pages | first $limit -}}
           <li>
-            <a
-              class="pagelink"
-              aria-label="post link to {{ .Title | plainify -}}"
-              href="{{- .RelPermalink -}}"
-            >
-              {{- .Title -}}</a
-            >
-            {{- with .Date }}
-              {{ .Format (default "2006/01/02" $.Site.Params.DateFormat) -}}
-            {{ end }}
+            <a href="{{- .RelPermalink -}}"> {{- .Title -}}</a>
             {{- with .Params.summary -}}
               <p>{{- . -}}</p>
             {{- end -}}

@@ -1,5 +1,8 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <strong>{{ .Title }}</strong>
+  {{- with .Params.summary -}}
+    <p>{{- . -}}</p>
+  {{- end -}}
   {{- range .Sections }}
     {{- partial "sectiontree.html" (dict "page" .) -}}
   {{- end }}

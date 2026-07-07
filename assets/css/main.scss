@@ -77,9 +77,12 @@ body {
     border-bottom: 0.1rem solid var(--line);
     > article {
       margin: 1rem 0;
-      padding: 1rem;
+      padding: 1rem 2rem;
       background-color: var(--bg);
       box-shadow: 0 0 0.5rem var(--shadow);
+      > p {
+        margin: 0.5rem 0;
+      }
     }
   }
   > footer {
