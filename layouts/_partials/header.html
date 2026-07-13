@@ -1,4 +1,4 @@
-<a href="/">{{ site.Title }}</a>
+<a href="{{- .Site.Home.RelPermalink -}}">{{ site.Title }}</a>
 <nav>
   {{- range site.Menus.main -}}
     <li>
