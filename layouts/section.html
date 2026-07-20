@@ -11,7 +11,7 @@
     <ul>
       {{ range .RegularPages }}
         <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-        {{ .Summary }}
+        {{- with .Params.Summary -}} {{ . }} {{- end -}}
       {{ end }}
     </ul>
   </article>

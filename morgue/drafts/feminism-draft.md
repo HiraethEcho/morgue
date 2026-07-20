@@ -6,7 +6,6 @@ tags:
 categories:
 topics:
 series:
-draft: true
 status:
 ---
 

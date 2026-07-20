@@ -6,7 +6,10 @@
     <ul>
       {{ range .Site.RegularPages }}
         <li>
-          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> <em>{{ .Summary }}</em>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          <em>
+            {{- with .Params.Summary -}}{{ . }}{{- end -}}
+          </em>
         </li>
       {{ end }}
     </ul>

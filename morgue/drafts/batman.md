@@ -8,7 +8,6 @@ categories: kulturprodukte
 topics:
 series:
 status: outline
-draft: true
 ---
 
 # Because he is Batman!

@@ -6,7 +6,6 @@ tags:
   - feminism
 categories:
 series: feminism
-draft: true
 ---
 
 # 从男同看父权制

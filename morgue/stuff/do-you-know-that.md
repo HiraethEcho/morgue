@@ -13,6 +13,8 @@ status: wip
 
 There is a website that …
 
+- run agent in a single [html page](https://onepagent.top/)
+
 ### 看一次就行
 
 - [太空电梯](https://neal.fun/space-elevator/)

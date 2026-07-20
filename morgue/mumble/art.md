@@ -3,7 +3,6 @@ title: 艺术之路
 date: 2025-06-14
 summary: 被其他的博主刺激到了
 tags:
-draft: true
 categories: mumble
 ---
 

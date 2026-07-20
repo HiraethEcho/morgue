@@ -5,7 +5,9 @@
     <ul>
       {{ range .RegularPages }}
         <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-        {{ .Summary }}
+        {{- with .Params.summary -}}
+          <p>{{- . -}}</p>
+        {{- end -}}
       {{ end }}
     </ul>
   </article>
