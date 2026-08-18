@@ -1,4 +1,14 @@
-<a href="{{- .Site.Home.RelPermalink -}}">{{ site.Title }}</a>
+<p>
+  {{- range .Ancestors.Reverse }}
+    <span>
+      <a href="{{- .RelPermalink -}}">{{- .Title -}}</a>
+    </span>
+    <span>»</span>
+  {{ end }}
+  <span>
+    {{ .Title -}}
+  </span>
+</p>
 <nav>
   {{- range site.Menus.main -}}
     <li>
