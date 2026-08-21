@@ -2,7 +2,6 @@ baseURL = 'https://morgue.keinmal.top/'
 hasCJKLanguage = true
 locale = 'zh-cn'
 title = 'Morgue'
-contentDir = 'morgue'
 defaultContentLanguage = 'zh-cn'
 
 [taxonomies]
