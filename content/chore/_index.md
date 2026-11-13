@@ -1,5 +1,5 @@
 ---
-title: 阁楼
+title: 杂物
 summary: Just some stuff
 ---
 
